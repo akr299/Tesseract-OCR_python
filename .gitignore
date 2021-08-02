@@ -1,5 +1,9 @@
 #ファイル指定
-kannpe.txt
+tesseracr-OCR copy.spec
+dist/tesseracr-OCR.exe
+
+#ディレクトリ指定
 __pycache__/
 build/
 Tesseract-OCR/
+dist/

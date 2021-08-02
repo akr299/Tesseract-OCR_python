@@ -4,8 +4,8 @@
 block_cipher = None
 
 
-a = Analysis(['C:\\Users\\shinh\\OneDrive\\デスクトップ\\ohira\\python\\OCR\\tesseracr-OCR.py'],
-             pathex=['C:\\Users\\shinh\\OneDrive\\デスクトップ\\ohira\\python\\OCR'],
+a = Analysis(['C:\\Users\\shinh\\OneDrive\\デスクトップ\\ohira\\python\\git\\tesseracr-OCR.py'],
+             pathex=['C:\\Users\\shinh\\OneDrive\\デスクトップ\\ohira\\python\\git'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -21,6 +21,8 @@ pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 
 exe = EXE(pyz,
+          Tree('C:\\Program Files\\Tesseract-OCR',prefix='data'),
+          Tree('C:\\Program Files\\Tesseract-OCR',prefix='tesseract'),
           a.scripts,
           a.binaries,
           a.zipfiles,

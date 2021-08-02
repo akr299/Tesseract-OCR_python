@@ -38,8 +38,7 @@ img_box = img.crop((252, 457, 360, 483))
 builder = pyocr.builders.TextBuilder(tesseract_layout=6)
 text = tool.image_to_string(img_box, lang="lets", builder=builder)
 
-
 print(text)
-print(path)
+print('path:'+path)
 
  

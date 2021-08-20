@@ -6,7 +6,6 @@ import sys
 #インストールしたTesseract-OCRのパスを環境変数「PATH」へ追記する。
 #OS自体に設定してあれば以下は不要
 path=r'C:\\Program Files\\Tesseract-OCR'
-#path=r'C:\Users\shinh\OneDrive\デスクトップ\ohira\python\OCR2\Tesseract-OCR'
 
 #PATHの区切り文字があるか確認する。無ければ追加
 if os.environ['PATH'][-1] != ';':
@@ -21,8 +20,6 @@ tool = tools[0]
 
 #OCR対象の画像ファイルを読み込む
 img = Image.open(sys.argv[1])
-#img = Image.open(r"C:\Users\shinh\OneDrive\デスクトップ\ohira\シナリオ\インド\OCRテスト\20210712180010.png")
-#img = Image.open("test.jpg")
 
 img_box = img.crop((252, 457, 360, 483))
 
@@ -30,6 +27,7 @@ img_box = img.crop((252, 457, 360, 483))
 builder = pyocr.builders.TextBuilder(tesseract_layout=6)
 text = tool.image_to_string(img_box, lang="lets", builder=builder)
 
+#文字を出力
 print(text)
 
  
